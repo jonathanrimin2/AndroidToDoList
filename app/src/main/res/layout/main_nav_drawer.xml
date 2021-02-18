@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#CDDC39"
     android:orientation="vertical">
 
     <ImageView
@@ -10,117 +10,131 @@
         android:layout_height="120dp"
         android:layout_margin="16dp"
         android:onClick="ClickLogo"
-        android:src="@drawable/ic_accessibility"/>
+        android:src="@drawable/ic_accessibility" />
 
     <TextView
+        style="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="To Do List"
-        android:textSize="20sp"
-        style="bold"
+        android:text="Ticking Time"
         android:textAlignment="center"
-        android:textColor="@color/black" />
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:background="@color/purple_700"/>
+        android:background="@color/purple_700" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:onClick="ClickHome">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-        <TextView
-            android:layout_width="1dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Home"
-            android:padding="@dimen/nav_drawer_padding"
-            android:layout_marginStart="@dimen/nav_drawer_layout_marginStart" />
+            android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="48dp"
-            android:src="@drawable/ic_home"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:onClick="ClickLogout"
+                android:orientation="horizontal">
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/nav_drawer_layout_marginStart"
+                    android:layout_weight="1"
+                    android:padding="@dimen/nav_drawer_padding"
+                    android:text="Logout"
+                    android:textColor="#FFFFFF" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:onClick="ClickDashboard">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="48dp"
+                    android:src="@drawable/ic_logout" />
 
-        <TextView
-            android:layout_width="1dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Dashboard"
-            android:padding="@dimen/nav_drawer_padding"
-            android:layout_marginStart="@dimen/nav_drawer_layout_marginStart" />
+            </LinearLayout>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="48dp"
-            android:src="@drawable/ic_dashboard"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:onClick="ClickHome"
+                android:orientation="horizontal">
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/nav_drawer_layout_marginStart"
+                    android:layout_weight="1"
+                    android:padding="@dimen/nav_drawer_padding"
+                    android:text="Home"
+                    android:textColor="#FFFFFF" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:onClick="ClickAboutUs">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="48dp"
+                    android:src="@drawable/ic_home" />
 
-        <TextView
-            android:layout_width="1dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="About Us"
-            android:padding="@dimen/nav_drawer_padding"
-            android:layout_marginStart="@dimen/nav_drawer_layout_marginStart" />
+            </LinearLayout>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="48dp"
-            android:src="@drawable/ic_info"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:onClick="ClickAboutUs"
+                android:orientation="horizontal">
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/nav_drawer_layout_marginStart"
+                    android:layout_weight="1"
+                    android:padding="@dimen/nav_drawer_padding"
+                    android:text="About Ticking Time"
+                    android:textColor="#FFFFFF" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:onClick="ClickLogout">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="48dp"
+                    android:src="@drawable/ic_info" />
 
-        <TextView
-            android:layout_width="1dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Logout"
-            android:padding="@dimen/nav_drawer_padding"
-            android:layout_marginStart="@dimen/nav_drawer_layout_marginStart" />
+            </LinearLayout>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="48dp"
-            android:src="@drawable/ic_logout"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:onClick="ClickDashboard"
+                android:orientation="horizontal">
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/nav_drawer_layout_marginStart"
+                    android:layout_weight="1"
+                    android:padding="@dimen/nav_drawer_padding"
+                    android:text="Dashboard"
+                    android:textColor="#FFFFFF" />
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="48dp"
+                    android:src="@drawable/ic_dashboard" />
 
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>
