@@ -27,13 +27,12 @@ public class MainActivity extends AppCompatActivity {
     private ListView listView;
     private Button button;
 
-
-
-
     //Initialize variable
     DrawerLayout drawerLayout;
 
-//    Retrieved from: https://www.youtube.com/watch?v=iesMhKUtYT8
+
+
+    //Retrieved from: https://www.youtube.com/watch?v=iesMhKUtYT8
     //Retrieved from: https://www.youtube.com/watch?v=i9mkAoZ8FNk&t=240s
 
     @Override
@@ -75,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
 
     private void addItem(View view) {
         EditText input = findViewById(R.id.listText);

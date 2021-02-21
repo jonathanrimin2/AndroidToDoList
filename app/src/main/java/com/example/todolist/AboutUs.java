@@ -38,8 +38,7 @@ public class AboutUs extends AppCompatActivity {
     }
 
     public void ClickAboutUs(View view){
-        //Redirect activity to about us
-        MainActivity.redirectActivity(this, AboutUs.class);
+        recreate();
     }
 
     public void ClickLogout(View view){
@@ -51,6 +50,5 @@ public class AboutUs extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         MainActivity.closeDrawer(drawerLayout);
-
     }
 }

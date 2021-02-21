@@ -22,6 +22,7 @@ public class Dashboard extends AppCompatActivity {
     CalendarView calendarView;
     TextView dateText;
 
+
     //Retrieved From https://www.youtube.com/watch?v=MDuGwI6P-X8
 
     private static final long START_TIME_IN_MILLIS = 60000;
@@ -36,13 +37,13 @@ public class Dashboard extends AppCompatActivity {
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
 
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar_and_timer);
+
+        //Assign variable
+        drawerLayout = findViewById(R.id.drawer_layout);
 
         calendarView = findViewById(R.id.calendarView);
         dateText =findViewById(R.id.dateText);
@@ -79,11 +80,6 @@ public class Dashboard extends AppCompatActivity {
         });
 
         updateCountDownText();
-
-
-        //Assign variable
-        drawerLayout = findViewById(R.id.drawer_layout);
-
     }
 
     private void startTimer(){
@@ -141,29 +137,29 @@ public class Dashboard extends AppCompatActivity {
     }
 
     public void ClickHome(View view){
-        //Redirect activity to home
-        MainActivity.redirectActivity(this,MainActivity.class);
+        MainActivity.redirectActivity(this, MainActivity.class);
     }
 
     public void ClickDashboard(View view){
-        //Recreate activity
         recreate();
     }
 
     public void ClickAboutUs(View view){
-        //Redirect activity to about us
-        MainActivity.redirectActivity(this, AboutUs.class);
+        MainActivity.redirectActivity(this,AboutUs.class);
     }
 
     public void ClickLogout(View view){
-        //Close app
         MainActivity.logout(this);
     }
-
 
     @Override
     protected void onPause() {
         super.onPause();
+        //Close Drawer
         MainActivity.closeDrawer(drawerLayout);
     }
+
 }
+
+
+
